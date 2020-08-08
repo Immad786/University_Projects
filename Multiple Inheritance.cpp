@@ -1,5 +1,4 @@
-
-#include <iostream>
+#include <iostream>    // The concept of base and derived class in Multiple inheritance..
 using namespace std;
 
 class Base1{
@@ -47,8 +46,10 @@ class Derived : public Base1, public Base2, public Base3
 };
 /*
 The derivations are like this..
+    the data members are protected,
+	because protected members remain protected 
+	i.e
     base1int --> protected
-    base2int --> protected
 
 Member functions:
     set_base1int() --> public

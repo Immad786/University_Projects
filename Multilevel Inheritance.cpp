@@ -41,7 +41,7 @@ void Exam ::set_marks(float m1, float m2)
 
 void Exam ::get_marks()
 {
-    cout << "The marks obtained in maths are: " << OOP << endl;
+    cout << "The marks obtained in OOP are: " << OOP << endl;
     cout << "The marks obtained in physics are: " << physics << endl;
 }
 

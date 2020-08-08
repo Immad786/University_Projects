@@ -29,7 +29,8 @@ int Base::getData2()
 }
 
 class Derived : public Base
-{ // Class is being derived publically
+{ 
+// Class is being derived publically
     int data3;
 
 public:

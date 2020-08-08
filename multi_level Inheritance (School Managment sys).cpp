@@ -1,7 +1,5 @@
  //                --- SCHOOL MANAGMENT SYSTEM ---
- /*               this is a school  managment system 
-      Where every member of School is input his data to login to an account
- */
+ 
 #include <iostream>
 #include <conio.h>
 using namespace std;
@@ -13,24 +11,7 @@ class identity
   public:
       void getsinfo(void)
       {
-    /*  	int Pin;
-    do
-    {
-        cout << "\n ------- Login -------";
-        cout << "\n Enter Secret Pin: ";
-        cin >> Pin; // this pin is secret.. to run this program
-        if (Pin != 786)
-        {
-            cout << "Incorrect username or Password combination, Please try again. \n"
-                 << endl;
-        }
-        else
-        {
-
-            cout << " Access granted.. " << endl;
-        }
-    } while (Pin != 786);
-    */
+      	
     cout<<"\n\nEnter code :-";
     cin>>code;
     cout<<"Enter name :-";
@@ -60,7 +41,7 @@ class teacher : public identity
       {
      dispinfo();
      cout<<"\nSUBJECT    :-"<<sub;
-     cout<<"\nPUBLICATION:-"<<classes;
+     cout<<"\nclasses:-"<<classes;
       }
 };
 
@@ -81,17 +62,17 @@ class officer : public identity
     }
 };
 
-class typist : public identity
+class typing_speed : public identity
 {
        float speed;
   public:
-      void gettypist(void)
+      void get_typing(void)
       {
     getsinfo();
     cout<<"Enter speed (wpm):-";
     cin>>speed;
       }
-      void disptypist(void)
+      void disp_typing(void)
       {
     dispinfo();
     cout<<"\nSPEED      :-"<<speed;
@@ -99,20 +80,20 @@ class typist : public identity
 };
 
 
-class students : public typist
+class students : public typing_speed
 {
      float gpa;
    public:
        void create(void)
     {
-      gettypist();
+      get_typing();
       cout<<"Enter GPA :-";
       cin>>gpa;
     }
     void display(void)
     {
-      disptypist();
-      cout<<"\nDAILY WAGES:-"<<gpa;
+      disp_typing();
+      cout<<"\nGPA       :-"<<gpa;
     }
 };
 
